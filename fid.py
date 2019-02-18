@@ -59,7 +59,7 @@ def _get_inception_layer(sess):
                   new_shape.append(None)
                 else:
                   new_shape.append(s)
-              o.__dict__['_shape_val'] = tf.TensorShape(new_shape)
+              o._shape = tf.TensorShape(new_shape)
     return pool3
 #-------------------------------------------------------------------------------
 
